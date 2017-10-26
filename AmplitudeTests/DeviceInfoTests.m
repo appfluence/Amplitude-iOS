@@ -7,7 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#if TARGET_OS_OSX
+#import <Cocoa/Cocoa.h>
+#else
 #import <UIKit/UIKit.h>
+#endif
 #import <OCMock/OCMock.h>
 #import "AMPConstants.h"
 #import "AMPDeviceInfo.h"
@@ -44,11 +48,19 @@
 }
 
 - (void) testOsName {
+#if TARGET_OS_OSX
+    XCTAssertEqualObjects(@"macOS", _deviceInfo.osName);
+#else
     XCTAssertEqualObjects(@"ios", _deviceInfo.osName);
+#endif
 }
 
 - (void) testOsVersion {
+#if TARGET_OS_OSX
+    XCTAssertEqualObjects([[NSProcessInfo processInfo] operatingSystemVersionString], _deviceInfo.osVersion);
+#else
     XCTAssertEqualObjects([[UIDevice currentDevice] systemVersion], _deviceInfo.osVersion);
+#endif
 }
 
 - (void) testManufacturer {
@@ -56,7 +68,11 @@
 }
 
 - (void) testModel {
+#if TARGET_OS_OSX
+    XCTAssertTrue([_deviceInfo.model containsString:@"Mac"]);
+#else
     XCTAssertEqualObjects(@"Simulator", _deviceInfo.model);
+#endif
 }
 
 - (void) testCarrier {
