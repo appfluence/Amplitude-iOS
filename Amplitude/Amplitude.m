@@ -265,14 +265,10 @@ static NSString *const SEQUENCE_NUMBER = @"sequence_number";
         _backgroundQueue.name = BACKGROUND_QUEUE_NAME;
         
         [_initializerQueue addOperationWithBlock:^{
-
-<<<<<<< HEAD
+            
             #if !TARGET_OS_OSX
-            _uploadTaskID = UIBackgroundTaskInvalid;
-            #endif
-=======
             self->_uploadTaskID = UIBackgroundTaskInvalid;
->>>>>>> master
+            #endif
             
             NSString *eventsDataDirectory = [AMPUtils platformDataDirectory];
             NSString *propertyListPath = [eventsDataDirectory stringByAppendingPathComponent:@"com.amplitude.plist"];
@@ -540,17 +536,11 @@ static NSString *const SEQUENCE_NUMBER = @"sequence_number";
                 UIApplicationState state = app.applicationState;
                 if (state != UIApplicationStateBackground) {
                     [self runOnBackgroundQueue:^{
-<<<<<<< HEAD
 #endif
-                        NSNumber* now = [NSNumber numberWithLongLong:[[self currentTime] timeIntervalSince1970] * 1000];
-                        [self startOrContinueSession:now];
-                        _inForeground = YES;
-#if !TARGET_OS_OSX
-=======
-                        long long now = [[self currentTime] timeIntervalSince1970] * 1000;
+                         long long now = [[self currentTime] timeIntervalSince1970] * 1000;
                         [self startOrContinueSession:now];
                         self->_inForeground = YES;
->>>>>>> master
+#if !TARGET_OS_OSX
                     }];
 
                 }
@@ -1151,15 +1141,10 @@ static NSString *const SEQUENCE_NUMBER = @"sequence_number";
         if (uploadSuccessful && [self.dbHelper getEventCount] > self.eventUploadThreshold) {
             int limit = self->_backoffUpload ? self->_backoffUploadBatchSize : 0;
             [self uploadEventsWithLimit:limit];
-<<<<<<< HEAD
 #if TARGET_OS_OSX
         }
 #else
-        } else if (_uploadTaskID != UIBackgroundTaskInvalid) {
-=======
-
         } else if (self->_uploadTaskID != UIBackgroundTaskInvalid) {
->>>>>>> master
             if (uploadSuccessful) {
                 self->_backoffUpload = NO;
                 self->_backoffUploadBatchSize = self.eventUploadMaxBatchSize;
@@ -1849,12 +1834,8 @@ static NSString *const SEQUENCE_NUMBER = @"sequence_number";
 - (id)unarchive:(NSString*)path {
 #if !TARGET_OS_OSX
     // unarchive using new NSKeyedUnarchiver method from iOS 9.0 that doesn't throw exceptions
-<<<<<<< HEAD
-    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_8_4) {
-#endif
-=======
     if (@available(iOS 9.0, *)) {
->>>>>>> master
+#endif
         NSFileManager *fileManager = [NSFileManager defaultManager];
         if ([fileManager fileExistsAtPath:path]) {
             NSData *inputData = [fileManager contentsAtPath:path];
