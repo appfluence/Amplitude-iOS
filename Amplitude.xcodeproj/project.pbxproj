@@ -61,6 +61,8 @@
 		60227C0C1CC5AC2F007C117B /* AMPRevenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 60227C0A1CC5AB8A007C117B /* AMPRevenue.m */; };
 		60227C0E1CC5BC07007C117B /* RevenueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60227C0D1CC5BC07007C117B /* RevenueTests.m */; };
 		602A9A6B1B754E7B0067230C /* AmplitudeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602A9A6A1B754E7B0067230C /* AmplitudeTests.m */; };
+		6041C8D021221A88003F1B38 /* DatabaseRecoveryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041C8CF21221A88003F1B38 /* DatabaseRecoveryTests.m */; };
+		6041C8D121221A9A003F1B38 /* DatabaseRecoveryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041C8CF21221A88003F1B38 /* DatabaseRecoveryTests.m */; };
 		60AFE7321F6B637100DF9A88 /* AMPURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFE7311F6B636F00DF9A88 /* AMPURLSession.m */; };
 		60AFE7331F6B70EF00DF9A88 /* AMPURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 60AFE7301F6B636B00DF9A88 /* AMPURLSession.h */; };
 		60AFE7341F6B70F300DF9A88 /* AMPURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AFE7311F6B636F00DF9A88 /* AMPURLSession.m */; };
@@ -74,6 +76,12 @@
 		60BA927C1C23767D0043178E /* AMPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BA92761C2376680043178E /* AMPUtils.m */; };
 		60BA927F1C23768E0043178E /* AMPDatabaseHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BA927D1C23768E0043178E /* AMPDatabaseHelperTests.m */; };
 		60BA92801C23768E0043178E /* IdentifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BA927E1C23768E0043178E /* IdentifyTests.m */; };
+		60FD3059210264C000267B2A /* AMPTrackingOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 60FD3058210264C000267B2A /* AMPTrackingOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60FD305B210264FA00267B2A /* AMPTrackingOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD305A210264FA00267B2A /* AMPTrackingOptions.m */; };
+		60FD305C210264FA00267B2A /* AMPTrackingOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD305A210264FA00267B2A /* AMPTrackingOptions.m */; };
+		60FD305D210264FA00267B2A /* AMPTrackingOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD305A210264FA00267B2A /* AMPTrackingOptions.m */; };
+		60FD305E210264FA00267B2A /* AMPTrackingOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD305A210264FA00267B2A /* AMPTrackingOptions.m */; };
+		60FD30612102760500267B2A /* TrackingOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD305F2102760500267B2A /* TrackingOptionsTest.m */; };
 		9D265EF41AB3FA2500399D93 /* SSLPinningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D265EF31AB3FA2500399D93 /* SSLPinningTests.m */; };
 		9D40E17E1AB3BF7F0095C7C6 /* AMPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D40E17A1AB3BF7F0095C7C6 /* AMPURLConnection.m */; };
 		9D40E17F1AB3BF7F0095C7C6 /* AMPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D40E17A1AB3BF7F0095C7C6 /* AMPURLConnection.m */; };
@@ -160,6 +168,7 @@
 		60227C0A1CC5AB8A007C117B /* AMPRevenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPRevenue.m; sourceTree = "<group>"; };
 		60227C0D1CC5BC07007C117B /* RevenueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevenueTests.m; sourceTree = "<group>"; };
 		602A9A6A1B754E7B0067230C /* AmplitudeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmplitudeTests.m; sourceTree = "<group>"; };
+		6041C8CF21221A88003F1B38 /* DatabaseRecoveryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseRecoveryTests.m; sourceTree = "<group>"; };
 		60AFE7301F6B636B00DF9A88 /* AMPURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPURLSession.h; sourceTree = "<group>"; };
 		60AFE7311F6B636F00DF9A88 /* AMPURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPURLSession.m; sourceTree = "<group>"; };
 		60BA92711C2376680043178E /* AMPDatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPDatabaseHelper.h; sourceTree = "<group>"; };
@@ -170,7 +179,9 @@
 		60BA92761C2376680043178E /* AMPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPUtils.m; sourceTree = "<group>"; };
 		60BA927D1C23768E0043178E /* AMPDatabaseHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPDatabaseHelperTests.m; sourceTree = "<group>"; };
 		60BA927E1C23768E0043178E /* IdentifyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyTests.m; sourceTree = "<group>"; };
-		785EB9A0C9E70FF8CF0BC8EB /* Pods-shared-AmplitudeTVOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shared-AmplitudeTVOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-shared-AmplitudeTVOSTests/Pods-shared-AmplitudeTVOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		60FD3058210264C000267B2A /* AMPTrackingOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPTrackingOptions.h; sourceTree = "<group>"; };
+		60FD305A210264FA00267B2A /* AMPTrackingOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPTrackingOptions.m; sourceTree = "<group>"; };
+		60FD305F2102760500267B2A /* TrackingOptionsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackingOptionsTest.m; sourceTree = "<group>"; };
 		9D265EF31AB3FA2500399D93 /* SSLPinningTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLPinningTests.m; sourceTree = "<group>"; };
 		9D40E1791AB3BF7F0095C7C6 /* AMPURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPURLConnection.h; sourceTree = "<group>"; };
 		9D40E17A1AB3BF7F0095C7C6 /* AMPURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPURLConnection.m; sourceTree = "<group>"; };
@@ -199,6 +210,7 @@
 		D46624ED1FA2520B00A68DA1 /* AmplitudeMacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmplitudeMacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46624EE1FA2520B00A68DA1 /* AmplitudeMacOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AmplitudeMacOSTests-Info.plist"; path = "/Users/rob/Amplitude-iOS/AmplitudeMacOSTests/AmplitudeMacOSTests-Info.plist"; sourceTree = "<absolute>"; };
 		D46624F11FA252CF00A68DA1 /* AmplitudeTVOSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmplitudeTVOSTests.m; sourceTree = "<group>"; };
+		D5EC52ADDCBE357BAE004716 /* Pods-shared-AmplitudeTVOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shared-AmplitudeTVOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-shared-AmplitudeTVOSTests/Pods-shared-AmplitudeTVOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D7280F441D655B9900CF13D4 /* Amplitude.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Amplitude.modulemap; sourceTree = "<group>"; };
 		E5952DE404561C7132D62518 /* libPods-shared-AmplitudeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shared-AmplitudeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93C8C541A59B3B9001339A5 /* AMPLocationManagerDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPLocationManagerDelegateTests.m; sourceTree = "<group>"; };
@@ -313,9 +325,9 @@
 				5F5A0F9C1AD07CA457230FA3 /* Pods-shared-AmplitudeMacOSTests.debug.xcconfig */,
 				24CCB92EF9001E6D79656D5A /* Pods-shared-AmplitudeMacOSTests.release.xcconfig */,
 				A066E70810AA174AD252570A /* Pods-shared-AmplitudeTVOSTests.debug.xcconfig */,
-				785EB9A0C9E70FF8CF0BC8EB /* Pods-shared-AmplitudeTVOSTests.release.xcconfig */,
 				AB268245CBE198C7C35B64B8 /* Pods-shared-AmplitudeTests.debug.xcconfig */,
 				30F0940465B5DAE071943354 /* Pods-shared-AmplitudeTests.release.xcconfig */,
+				D5EC52ADDCBE357BAE004716 /* Pods-shared-AmplitudeTVOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -374,6 +386,8 @@
 				9D76A3A41ABA5F890062E132 /* ComodoRsaCA.der */,
 				9D76A3A31ABA5F890062E132 /* ComodoRsaDomainValidationCA.der */,
 				9D6E194B1ACCDE1C00352C6C /* SSLCertificatePinning */,
+				60FD3058210264C000267B2A /* AMPTrackingOptions.h */,
+				60FD305A210264FA00267B2A /* AMPTrackingOptions.m */,
 			);
 			path = Amplitude;
 			sourceTree = "<group>";
@@ -397,6 +411,8 @@
 				9D82D1D71AC1006600C3F321 /* SetupTests.m */,
 				9D265EF31AB3FA2500399D93 /* SSLPinningTests.m */,
 				E98C05301A48E7FE00800C63 /* Supporting Files */,
+				60FD305F2102760500267B2A /* TrackingOptionsTest.m */,
+				6041C8CF21221A88003F1B38 /* DatabaseRecoveryTests.m */,
 			);
 			path = AmplitudeTests;
 			sourceTree = "<group>";
@@ -425,6 +441,7 @@
 				343AB41A1CC99F4F00962943 /* AmplitudeFramework.h in Headers */,
 				343AB42E1CC9A1EA00962943 /* AMPConstants.h in Headers */,
 				343AB4381CC9A1EA00962943 /* ISPCertificatePinning.h in Headers */,
+				60FD3059210264C000267B2A /* AMPTrackingOptions.h in Headers */,
 				343AB42D1CC9A1EA00962943 /* AMPARCMacros.h in Headers */,
 				60AFE7331F6B70EF00DF9A88 /* AMPURLSession.h in Headers */,
 				343AB43A1CC9A1EA00962943 /* ISPPinnedNSURLSessionDelegate.h in Headers */,
@@ -464,8 +481,6 @@
 				600CBC581E2EF5B0001F58A9 /* Sources */,
 				600CBC591E2EF5B0001F58A9 /* Frameworks */,
 				600CBC5A1E2EF5B0001F58A9 /* Resources */,
-				28ED05F01CDE1EB536821478 /* [CP] Embed Pods Frameworks */,
-				D2EBB77C3D88842E73707719 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -480,12 +495,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D46624EA1FA2520B00A68DA1 /* Build configuration list for PBXNativeTarget "AmplitudeMacOSTests" */;
 			buildPhases = (
-				54BCA2D274C6B04BA7CEEE17 /* [CP] Check Pods Manifest.lock */,
+				230A8732A99CF0219F53DC9E /* [CP] Check Pods Manifest.lock */,
 				D46624C81FA2520B00A68DA1 /* Sources */,
 				D46624E21FA2520B00A68DA1 /* Frameworks */,
 				D46624E41FA2520B00A68DA1 /* Resources */,
-				D7B509556374CB5FE7F5AF70 /* [CP] Embed Pods Frameworks */,
-				11CC6C18775EC6712717F73A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -517,12 +530,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E98C05371A48E7FE00800C63 /* Build configuration list for PBXNativeTarget "AmplitudeTests" */;
 			buildPhases = (
-				09B183BA900B2D9C7E278C48 /* [CP] Check Pods Manifest.lock */,
+				6537EE81E55D978BECA62DD6 /* [CP] Check Pods Manifest.lock */,
 				E98C052A1A48E7FE00800C63 /* Sources */,
 				E98C052B1A48E7FE00800C63 /* Frameworks */,
 				E98C052C1A48E7FE00800C63 /* Resources */,
-				079D48E1BB8F6A97F3021F05 /* [CP] Embed Pods Frameworks */,
-				6830EC52461F72DA654D7A61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -539,7 +550,7 @@
 		E98C051B1A48E7FE00800C63 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Amplitude;
 				TargetAttributes = {
 					343AB4161CC99F4F00962943 = {
@@ -618,79 +629,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		079D48E1BB8F6A97F3021F05 /* [CP] Embed Pods Frameworks */ = {
+		230A8732A99CF0219F53DC9E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shared-AmplitudeTests/Pods-shared-AmplitudeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		09B183BA900B2D9C7E278C48 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-shared-AmplitudeTests-checkManifestLockResult.txt",
+			outputFileListPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		11CC6C18775EC6712717F73A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shared-AmplitudeMacOSTests/Pods-shared-AmplitudeMacOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		28ED05F01CDE1EB536821478 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shared-AmplitudeTVOSTests/Pods-shared-AmplitudeTVOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		54BCA2D274C6B04BA7CEEE17 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-shared-AmplitudeMacOSTests-checkManifestLockResult.txt",
 			);
@@ -699,49 +651,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6830EC52461F72DA654D7A61 /* [CP] Copy Pods Resources */ = {
+		6537EE81E55D978BECA62DD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shared-AmplitudeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shared-AmplitudeTests/Pods-shared-AmplitudeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D2EBB77C3D88842E73707719 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shared-AmplitudeTVOSTests/Pods-shared-AmplitudeTVOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7B509556374CB5FE7F5AF70 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shared-AmplitudeMacOSTests/Pods-shared-AmplitudeMacOSTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEDD4845B8C0C487ABE8D605 /* [CP] Check Pods Manifest.lock */ = {
@@ -781,6 +710,7 @@
 				343AB4271CC99FC900962943 /* AMPUtils.m in Sources */,
 				343AB4261CC99FC700962943 /* AMPURLConnection.m in Sources */,
 				343AB4201CC99FB800962943 /* AMPDatabaseHelper.m in Sources */,
+				60FD305D210264FA00267B2A /* AMPTrackingOptions.m in Sources */,
 				343AB4291CC99FD800962943 /* ISPPinnedNSURLConnectionDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -803,9 +733,11 @@
 				600CBC6F1E2EF614001F58A9 /* Amplitude.m in Sources */,
 				600CBC701E2EF617001F58A9 /* AMPLocationManagerDelegate.m in Sources */,
 				600CBC7F1E2EF64C001F58A9 /* BaseTestCase.m in Sources */,
+				60FD305E210264FA00267B2A /* AMPTrackingOptions.m in Sources */,
 				600CBC771E2EF62C001F58A9 /* ISPPinnedNSURLConnectionDelegate.m in Sources */,
 				600CBC6B1E2EF609001F58A9 /* AMPConstants.m in Sources */,
 				600CBC831E2EF656001F58A9 /* SetupTests.m in Sources */,
+				6041C8D121221A9A003F1B38 /* DatabaseRecoveryTests.m in Sources */,
 				600CBC6E1E2EF611001F58A9 /* AMPIdentify.m in Sources */,
 				600CBC6C1E2EF60C001F58A9 /* AMPDatabaseHelper.m in Sources */,
 				600CBC811E2EF651001F58A9 /* RevenueTests.m in Sources */,
@@ -862,6 +794,7 @@
 				9DC7085A1AD4B28300949778 /* AMPConstants.m in Sources */,
 				9D6E19551ACCDE1C00352C6C /* ISPPinnedNSURLSessionDelegate.m in Sources */,
 				E96785ED1A48E93F00887CCD /* Amplitude.m in Sources */,
+				60FD305B210264FA00267B2A /* AMPTrackingOptions.m in Sources */,
 				9D6E19531ACCDE1C00352C6C /* ISPCertificatePinning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,6 +809,7 @@
 				9D6E19581ACCDE9000352C6C /* ISPPinnedNSURLSessionDelegate.m in Sources */,
 				602A9A6B1B754E7B0067230C /* AmplitudeTests.m in Sources */,
 				9DFBB9CC1AB0D47A0017F703 /* SessionTests.m in Sources */,
+				60FD30612102760500267B2A /* TrackingOptionsTest.m in Sources */,
 				E96786001A48FBD100887CCD /* AMPDeviceInfo.m in Sources */,
 				60AFE7341F6B70F300DF9A88 /* AMPURLSession.m in Sources */,
 				9DFBB9CA1AB0D26E0017F703 /* BaseTestCase.m in Sources */,
@@ -886,8 +820,10 @@
 				60227C0E1CC5BC07007C117B /* RevenueTests.m in Sources */,
 				60227C0C1CC5AC2F007C117B /* AMPRevenue.m in Sources */,
 				9D82D1D81AC1006600C3F321 /* SetupTests.m in Sources */,
+				6041C8D021221A88003F1B38 /* DatabaseRecoveryTests.m in Sources */,
 				60BA927A1C2376770043178E /* AMPDatabaseHelper.m in Sources */,
 				9D265EF41AB3FA2500399D93 /* SSLPinningTests.m in Sources */,
+				60FD305C210264FA00267B2A /* AMPTrackingOptions.m in Sources */,
 				E96786011A48FBD100887CCD /* Amplitude.m in Sources */,
 				E93C8C551A59B3B9001339A5 /* AMPLocationManagerDelegateTests.m in Sources */,
 				9D40E17F1AB3BF7F0095C7C6 /* AMPURLConnection.m in Sources */,
@@ -990,7 +926,7 @@
 		};
 		600CBC6A1E2EF5B0001F58A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 785EB9A0C9E70FF8CF0BC8EB /* Pods-shared-AmplitudeTVOSTests.release.xcconfig */;
+			baseConfigurationReference = D5EC52ADDCBE357BAE004716 /* Pods-shared-AmplitudeTVOSTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1068,12 +1004,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1101,7 +1039,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1124,12 +1062,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1150,7 +1090,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-lsqlite3.0";

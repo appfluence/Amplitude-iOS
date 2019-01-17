@@ -31,6 +31,7 @@ NSString *const userId = @"userId";
     [super setUp];
     self.amplitude = [Amplitude alloc];
     self.databaseHelper = [AMPDatabaseHelper getDatabaseHelper];
+    self.databaseHelper.callResetListenerOnDatabaseReset = NO;
     XCTAssertTrue([self.databaseHelper resetDB:NO]);
 
     [self.amplitude init];

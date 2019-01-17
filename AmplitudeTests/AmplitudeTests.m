@@ -20,6 +20,7 @@
 #import "AMPDeviceInfo.h"
 #import "AMPARCMacros.h"
 #import "AMPUtils.h"
+#import "AMPTrackingOptions.h"
 
 // expose private methods for unit testing
 @interface AMPDeviceInfo (Tests)
@@ -338,6 +339,46 @@
     [self setupAsyncResponse:serverResponse];
     AMPIdentify *identify2 = [[[AMPIdentify alloc] init] set:@"key2" value:@"value2"];
     [self.amplitude identify:identify2];
+    SAFE_ARC_RELEASE(identify2);
+    [self.amplitude flushQueue];
+
+    XCTAssertEqual([dbHelper getEventCount], 0);
+    XCTAssertEqual([dbHelper getIdentifyCount], 0);
+    XCTAssertEqual([dbHelper getTotalEventCount], 0);
+}
+
+- (void)testGroupIdentify {
+    NSString *groupType = @"test group type";
+    NSString *groupName = @"test group name";
+    AMPDatabaseHelper *dbHelper = [AMPDatabaseHelper getDatabaseHelper];
+    [self.amplitude setEventUploadThreshold:2];
+
+    AMPIdentify *identify = [[AMPIdentify identify] set:@"key1" value:@"value1"];
+    [self.amplitude groupIdentifyWithGroupType:groupType groupName:groupName groupIdentify:identify];
+    [self.amplitude flushQueue];
+
+    XCTAssertEqual([dbHelper getEventCount], 0);
+    XCTAssertEqual([dbHelper getIdentifyCount], 1);
+    XCTAssertEqual([dbHelper getTotalEventCount], 1);
+
+    NSDictionary *operations = [NSDictionary dictionaryWithObject:@"value1" forKey:@"key1"];
+    NSDictionary *expected = [NSDictionary dictionaryWithObject:operations forKey:@"$set"];
+    NSDictionary *expectedGroups = [NSDictionary dictionaryWithObject:@"test group name" forKey:@"test group type"];
+    NSDictionary *event = [self.amplitude getLastIdentify];
+    XCTAssertEqualObjects([event objectForKey:@"event_type"], GROUP_IDENTIFY_EVENT);
+    XCTAssertEqualObjects([event objectForKey:@"groups"], expectedGroups);
+    XCTAssertEqualObjects([event objectForKey:@"group_properties"], expected);
+    XCTAssertEqualObjects([event objectForKey:@"user_properties"], [NSDictionary dictionary]);
+    XCTAssertEqualObjects([event objectForKey:@"event_properties"], [NSDictionary dictionary]); // event properties should be empty
+    XCTAssertEqual(1, [[event objectForKey:@"sequence_number"] intValue]);
+
+    NSMutableDictionary *serverResponse = [NSMutableDictionary dictionaryWithDictionary:
+                                           @{ @"response" : [[NSHTTPURLResponse alloc] initWithURL:[NSURL URLWithString:@"/"] statusCode:200 HTTPVersion:nil headerFields:@{}],
+                                              @"data" : [@"success" dataUsingEncoding:NSUTF8StringEncoding]
+                                              }];
+    [self setupAsyncResponse:serverResponse];
+    AMPIdentify *identify2 = [[[AMPIdentify alloc] init] set:@"key2" value:@"value2"];
+    [self.amplitude groupIdentifyWithGroupType:groupType groupName:groupName groupIdentify:identify2];
     SAFE_ARC_RELEASE(identify2);
     [self.amplitude flushQueue];
 
@@ -860,6 +901,35 @@
 
     [mockDeviceInfo verify];
     [mockDeviceInfo stopMocking];
+}
+
+-(void)testSetTrackingConfig {
+    AMPTrackingOptions *options = [[[[[AMPTrackingOptions options] disableCity] disableIPAddress] disableLanguage] disableCountry];
+    [self.amplitude setTrackingOptions:options];
+
+    [self.amplitude logEvent:@"test"];
+    [self.amplitude flushQueue];
+    NSDictionary *event = [self.amplitude getLastEvent];
+
+    // verify we have platform and carrier since those were not filtered out
+    XCTAssertEqualObjects([event objectForKey:@"platform"], @"iOS");
+    XCTAssertEqualObjects([event objectForKey:@"carrier"], @"Unknown");
+
+    // verify we do not have any of the filtered out events
+    XCTAssertNil([event objectForKey:@"city"]);
+    XCTAssertNil([event objectForKey:@"country"]);
+    XCTAssertNil([event objectForKey:@"language"]);
+
+    // verify api properties contains tracking options for location filtering
+    NSDictionary *apiProperties = [event objectForKey:@"api_properties"];
+    XCTAssertNotNil([apiProperties objectForKey:@"ios_idfv"]);
+    XCTAssertNotNil([apiProperties objectForKey:@"tracking_options"]);
+
+    NSDictionary *trackingOptions = [apiProperties objectForKey:@"tracking_options"];
+    XCTAssertEqual(3, trackingOptions.count);
+    XCTAssertEqualObjects([NSNumber numberWithBool:NO], [trackingOptions objectForKey:@"city"]);
+    XCTAssertEqualObjects([NSNumber numberWithBool:NO], [trackingOptions objectForKey:@"country"]);
+    XCTAssertEqualObjects([NSNumber numberWithBool:NO], [trackingOptions objectForKey:@"ip_address"]);
 }
 
 @end
